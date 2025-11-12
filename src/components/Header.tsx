@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div id="header" >
+    <div id="header">
       <Menubar className="flex p-8">
         <MenubarMenu>
           <MenubarTrigger>
@@ -22,7 +22,7 @@ export default function Header() {
           <Link to={"/"} className="flex-1">
             FA.COM
           </Link>
-          {/* static menu */}
+
           <MenubarContent>
             <MenubarItem>New Items</MenubarItem>
             <MenubarSeparator />
@@ -35,10 +35,7 @@ export default function Header() {
         </MenubarMenu>
 
         <Link to={"/cart"}>
-          <Button
-            variant="outline"
-            // onClick={() => (window.location.href = "/cart")}
-          >
+          <Button variant="outline">
             <TiShoppingCart />
           </Button>
         </Link>

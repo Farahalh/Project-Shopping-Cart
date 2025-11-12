@@ -6,14 +6,12 @@ import { productAtom } from "@/atoms/product";
 export default function Cart() {
   const [productsAtom] = useAtom(productAtom);
 
-  // if cart is empty, display message
   const emptyCart = () => {
     if (productsAtom.length === 0) {
       return "Your cart is empty!";
     }
   };
 
-  // calculate the total amount and updating if icremented or decremented
   const totalSum = productsAtom.reduce(
     (total, product) => total + product.price * product.quantity,
     0
