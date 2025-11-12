@@ -30,7 +30,6 @@ export default function ProductList() {
       </h1>
 
       <div className="grid grid-cols-1 grid-flow-row gap-4">
-        {/* getting products from API and displaying in the card below */}
         {products.map((product: Product) => (
           <Card key={product.id} className="">
             <CardHeader>
@@ -49,11 +48,10 @@ export default function ProductList() {
                 {product.description}
               </CardDescription>
 
-              <p className="py-1">{product.price} sek</p>
+              <p className="py-1">Price: {product.price}sek</p>
               <p className="py-1">Rate: {product.rating.rate}</p>
               <p className="py-1">Reviews: {product.rating.count}</p>
 
-              {/* navigation to SingleProduct page based on id onClick */}
               <Button
                 className="my-2"
                 onClick={() => navigate(`/product/${product.id}`)}

@@ -27,7 +27,6 @@ export default function SingleProduct() {
   }
 
   return (
-    // single product page displaying product in card
     <div className="singleProduct">
       <Header />
       <div className="py-14">
@@ -49,7 +48,6 @@ export default function SingleProduct() {
             </CardDescription>
             <p className="py-1">{singleProduct.price} sek</p>
 
-            {/* onClick add product to empty [] displayed in CartItem and then Cart*/}
             <Button
               className="my-2"
               onClick={() => {
@@ -58,7 +56,7 @@ export default function SingleProduct() {
                     (product) => product.id === singleProduct.id
                   );
 
-                  if (index !== -1) {
+                  if (index == 0) {
                     const updatedProducts = [...prevProducts];
                     updatedProducts[index] = {
                       ...updatedProducts[index],
