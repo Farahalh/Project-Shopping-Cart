@@ -2,8 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { useAtom } from "jotai";
-import { productAtom } from "@/atoms/product";
-import { Product } from "@/atoms/product";
+import { productAtom, Product } from "@/atoms/product";
 
 export default function CartItem() {
   const [productsAtom, setProductsAtom] = useAtom(productAtom);
