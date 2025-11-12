@@ -1,6 +1,4 @@
 import { atomWithStorage } from "jotai/utils";
-//future use atomWithStorage
-
 export interface Product {
   id: number;
   image?: string;
@@ -9,5 +7,4 @@ export interface Product {
   quantity: number;
 }
 
-//future use atomWithStorage
-export const productAtom = atomWithStorage<Product[]>('productAtom', []);
+export const productAtom = atomWithStorage<Product[]>("productAtom", []);
